@@ -1,11 +1,15 @@
 # Maven build output
-target/
+ProjectBookstoreApp/target/
 
-# IntelliJ IDEA settings
+# IntelliJ IDEA settings (both root and subfolder)
 .idea/
+ProjectBookstoreApp/.idea/
 *.iml
+ProjectBookstoreApp/*.iml
 *.iws
+ProjectBookstoreApp/*.iws
 out/
+ProjectBookstoreApp/out/
 
 # Eclipse settings
 .metadata/
@@ -15,9 +19,11 @@ out/
 
 # VS Code settings
 .vscode/
+ProjectBookstoreApp/.vscode/
 
 # Logs
 *.log
+ProjectBookstoreApp/*.log
 
 # Operating system files
 .DS_Store
@@ -26,3 +32,8 @@ Thumbs.db
 # Project requirements
 Wymagania_do_projektu.pdf
 
+# Personal instructions / notes
+instructions.txt
+
+# Maven Wrapper jar
+!/ProjectBookstoreApp/.mvn/wrapper/maven-wrapper.jar
