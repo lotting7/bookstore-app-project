@@ -42,7 +42,7 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/auth/**").permitAll() // otwarty dostep do rejestracji i logowania
                 .requestMatchers("/swagger-ui/**", "/v3/api-docs", "/v3/api-docs/**", "/swagger-ui.html").permitAll() // otwarty swagger do testow
-                .requestMatchers(HttpMethod.GET, "/api/books").permitAll() // mozliwosc przegladania ksiazek nie bedac zalogowanym
+                .requestMatchers(HttpMethod.GET, "/api/books").permitAll() // mozliwosc przegladania ksiazek nie bedac zalogowanym1
                 .anyRequest().authenticated() // reszta wymaga logowania
             )
             .httpBasic(Customizer.withDefaults()); // logowanie http basic
