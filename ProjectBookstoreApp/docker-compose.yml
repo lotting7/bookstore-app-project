@@ -12,5 +12,17 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  app:
+    build: .
+    container_name: bookstore-app
+    ports:
+      - "8081:8081"
+    depends_on:
+      - postgres
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/bookstore
+      - SPRING_DATASOURCE_USERNAME=bookstore_user
+      - SPRING_DATASOURCE_PASSWORD=bookstore_password
+
 volumes:
   postgres_data:
